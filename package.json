@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/RootLEE2/aws-study#readme",
   "dependencies": {
+    "ejs": "^3.1.7",
     "express": "^4.18.1"
   }
 }
