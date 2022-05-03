@@ -18,6 +18,8 @@
   "homepage": "https://github.com/RootLEE2/aws-study#readme",
   "dependencies": {
     "ejs": "^3.1.7",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "express-session": "^1.17.2",
+    "session-file-store": "^1.5.0"
   }
 }
