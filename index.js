@@ -2,8 +2,8 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-const mainRouter = require('./routers/main');
-const ansiWebRouter = require('./routers/ansi-web');
+const mainRouter = require('./routes/main');
+const ansiWebRouter = require('./routes/ansi-web');
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
