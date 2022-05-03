@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>hw-0415</title>
+
+    <style>
+      .msg {
+        font-family: monospace, "맑은 고딕", cursive;
+      }
+
+      #container {
+        position: relative;
+        top: 100px;
+        left: 50px;
+
+        display: flex;
+      }
+
+      .item {
+        width: 150px;
+        margin-right: 50px;
+
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .item .wrap {
+        width: auto;
+        height: auto;
+        margin-bottom: 50px;
+      }
+
+      .item .area {
+        width: auto;
+      }
+
+      .area .msg {
+        font-size: 1em;
+      }
+
+      .wrap .figure {
+        width: 80px;
+        height: 80px;
+        border: 1px solid black;
+
+        display: inline-block;
+      }
+
+      .wrap .area .msg {
+        margin-block-start: 2em;
+
+        font-size: 0.8em;
+      }
+
+
+      @keyframes clockwise-rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes counterclockwise-rotation {
+        from {
+          transform: rotate(360deg);
+        }
+        to {
+          transform: rotate(0deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="item">
+        <div class="wrap">
+          <div class="figure" style="animation: clockwise-rotation 5s linear infinite;"></div>
+          <div class="area">
+            <p class="msg">시계 방향</p>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <div class="figure" style="animation: counterclockwise-rotation 5s linear infinite;"></div>
+          <div class="area">
+            <p class="msg">반시계 방향</p>
+          </div>
+        </div>
+
+        <div class="area">
+          <p class="msg">linear</p>
+        </div>
+      </div>
+    
+
+      
+      <div class="item">
+        <div class="wrap">
+          <div class="figure" style="animation: clockwise-rotation 5s ease-in-out infinite;"></div>
+          <div class="area">
+            <p class="msg">시계 방향</p>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <div class="figure" style="animation: counterclockwise-rotation 5s ease-in-out infinite;"></div>
+          <div class="area">
+            <p class="msg">반시계 방향</p>
+          </div>
+        </div>
+
+        <div class="area">
+          <p class="msg">ease-in-out</p>
+        </div>
+      </div>
+    
+
+
+      <div class="item">
+        <div class="wrap">
+          <div class="figure" style="animation: clockwise-rotation 5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;"></div>
+          <div class="area">
+            <p class="msg">시계 방향</p>
+          </div>
+        </div>
+
+        <div class="wrap">
+          <div class="figure" style="animation: counterclockwise-rotation 5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;"></div>
+          <div class="area">
+            <p class="msg">반시계 방향</p>
+          </div>
+        </div>
+
+        <div class="area">
+          <p class="msg">In Out·Back</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
