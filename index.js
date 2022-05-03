@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/', mainRouter);
-app.use('/ansi-web', ansiWebRouter);
+app.use('/ansi/web-study', ansiWebRouter);
 
 app.listen(port, () => {
   console.log(`Server listening on http://3.35.135.201:${port}`);
