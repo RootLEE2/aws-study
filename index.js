@@ -1,6 +1,10 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const session = require('express-session');
+const FileStore = require('session-file-store')(session);
+const FileStore = require('')
+const app = express();
+const port = 3000;
+const fileStoreOptions = {};
 
 const mainRouter = require('./routes/main');
 const ansiWebRouter = require('./routes/ansi-web');
@@ -12,6 +16,13 @@ app.engine('html', require('ejs').renderFile);
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use(session({
+  secret: '2root study',
+  resave: false,
+  saveUninitialized: true,
+  store: new FileStore(fileStoreOptions),
+}));
 
 app.use('/', mainRouter);
 app.use('/ansi/web-study', ansiWebRouter);
