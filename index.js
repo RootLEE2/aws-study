@@ -2,7 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 const app = express();
-const port = 3000;
+const port = 8080;
 const fileStoreOptions = {};
 
 const mainRouter = require('./routes/main');
