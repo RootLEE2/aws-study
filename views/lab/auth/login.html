@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>로그인</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/lab/login.css">
+  </head>
+  <body>
+    <div id="wrap" class="wrap">
+      <!-- header -->
+      <header class="header" role="banner">
+        <div class="header_inner">
+          <a href="/lab" class="logo">
+            <h1 class="blind">REROOT</h1>
+          </a>
+        </div>
+      </header>
+  
+  
+      <!-- container -->
+      <div id="container" class="container">
+        <!-- content -->
+        <div class="content">
+          <div class="login_wrap">
+            <div class="menu_wrap">
+              <span class="menu_text">
+                <span class="text">ID 로그인</span>
+              </span>
+            </div>
+            <form id="frmIDLogin" name="frmIDLogin" target="_top" autocomplete="off"
+                action="" method="post">
+              <!-- 유저 관련 데이터이지만 유저한테 보여지면 안되는 내용들을 hidden으로 처리
+              <input type="hidden" id="localechange" name="localechange" value=""> -->
+  
+              <ul class="panel_wrap">
+                <li class="panel_item" style="display: block;">
+                  <div class="panel_inner" role="tabpanel">
+                    <div class="id_pw_wrap">
+                      <div class="input_row" id="id_line">
+                        <div class="icon_cell" id="id_cell">
+                          <span class="icon_id">
+                            <span class="blind">아이디</span>
+                          </span>
+                        </div>
+                        <input type="text" id="login_id" name="login_id" placeholder="아이디" title="아이디"
+                            class="input_text" maxlength="41"
+                            value=<%=userId%>>
+                        <span role="button" class="btn_delete" id="id_clear" style="display: none;">
+                          <span class="icon_delete">
+                            <span class="blind">삭제</span>
+                          </span>
+                        </span>
+                      </div>
+  
+                      <div class="input_row" id="pw_line">
+                        <div class="icon_cell" id="pw_cell">
+                          <span class="icon_pw">
+                            <span class="blind">아이디</span>
+                          </span>
+                        </div>
+                        <input type="password" id="login_pw" name="login_pw" placeholder="비밀번호" title="비밀번호"
+                            class="input_text" maxlength="16"
+                            value=<%=userPassword%>>
+                        <span role="button" class="btn_delete" id="pw_clear" style="display: none;">
+                          <span class="icon_delete">
+                            <span class="blind">삭제</span>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+  
+                    <div class="login_keep_wrap" id="login_keep_wrap">
+                      <div class="keep_check">
+                        <input type="checkbox" id="keep" name="long"
+                            class="input_keep" value="off">
+                        <label for="keep" class="keep_text">로그인 상태 유지</label>
+                      </div>
+                    </div>
+  
+                    <div class="login_error_wrap" id="err_capslock" style="display: none;">
+                      <div class="error_message">
+                        <strong>CapsLock</strong>이 켜져 있습니다.
+                      </div>
+                    </div>
+                    <div class="login_error_wrap" id="err_empty_id" style="display: none;">
+                      <div class="error_message">
+                        <strong>아이디</strong>를 입력해 주세요.
+                      </div>
+                    </div>
+                    <div class="login_error_wrap" id="err_empty_pw" style="display: none;">
+                      <div class="error_message">
+                        <strong>비밀번호</strong>를 입력해 주세요.
+                      </div>
+                    </div>
+                    <div class="login_error_wrap" id="err_common">
+                      <div class="error_message"
+                          style="width: 90%;">
+                        
+                      </div>
+                    </div>
+  
+                    <div class="btn_login_wrap">
+                      <button type="submit" class="btn_login" id="log.login">
+                        <span class="btn_text">로그인</span>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </form>
+          </div>
+  
+          <ul class="find_wrap">
+            <li><a target="_blank" href="./"
+                  class="find_text">비밀번호 찾기</a></li>
+            <li><a target="_blank" href="./"
+                  class="find_text">아이디 찾기</a></li>
+            <li><a target="_blank" href="./signup"
+                  class="find_text">회원가입</a></li>
+          </ul>
+        </div>
+        <!-- //content -->
+      </div>
+  
+  
+      <!-- footer -->
+      <footer class="footer">
+        <div class="footer_inner">
+          <!-- 고객센터,서비스안내 -->
+          <ul class="footer_link" id="footer_link">
+            <li>
+              <a target="_blank" id="fot.agreement" href="http://www.naver.com/rules/service.html"
+                  class="footer_item">
+                <span class="text">이용약관</span>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" id="fot.privacy" href="http://www.naver.com/rules/privacy.html"
+                  class="footer_item">
+                <span class="text">개인정보처리방침</span>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" id="fot.disclaimer" href="http://www.naver.com/rules/disclaimer.html"
+                  class="footer_item">
+                <span class="text">책임의 한계와 법적고지</span>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" id="fot.help" href="https://help.naver.com/support/service/main.nhn?serviceNo=532"
+                  class="footer_item">
+                <span class="text">회원정보 고객센터</span>
+              </a>
+            </li>
+          </ul>
+          <div class="footer_copy">
+            <a target="_blank" id="fot.naver" href="https://reroot.tistory.com/">
+              <span class="footer_logo">
+                <span class="blind">REROOT</span>
+              </span>
+            </a>
+            <span class="text">Copyright</span>
+            <span class="corp">© REROOT Co.</span>
+            <span class="text">All Rights Reserved.</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
